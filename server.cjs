@@ -383,7 +383,7 @@ app.post('/api/observations', async (req, res) => {
 
   const plant = PLANTS[plantName];
   if (!plant) return res.status(400).json({ error: 'Invalid or missing plant selection.' });
-  if (!empName || !description) return res.status(400).json({ error: 'Employee name and description are required.' });
+  if (!empName) return res.status(400).json({ error: 'Employee name and description are required.' });
 
   const { data, error } = await supabase
     .from('observations')
