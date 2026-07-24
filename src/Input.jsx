@@ -288,7 +288,7 @@ export default function Input() {
     if (!form.empName.trim()) return setStatus({ type: 'error', text: 'Employee name is required.' });
     // Added validation for behaviorType so users are forced to select an option
     if (!form.behaviorType) return setStatus({ type: 'error', text: 'Driver behavior selection is required.' });
-    if (!form.description.trim()) return setStatus({ type: 'error', text: 'Description is required.' });
+    
 
     setBusy(true);
     try {
