@@ -65,18 +65,28 @@ export default function Dashboard({ user }) {
     return Object.entries(m).map(([plant, count]) => ({ name: PLANT_CODE[plant] || plant, plant, count }));
   }, [rows]);
 
-  const topDrivers = useMemo(() => {
-    const m = {};
-    rows.forEach((r) => {
-      const d = (r.driver_name || 'Unknown').trim() || 'Unknown';
-      m[d] = (m[d] || 0) + 1;
-    });
-    return Object.entries(m)
-      .map(([name, count]) => ({ name, count }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 6);
-  }, [rows]);
-
+  // const topDrivers = useMemo(() => {
+  //   const m = {};
+  //   rows.forEach((r) => {
+  //     const d = (r.driver_name || 'Unknown').trim() || 'Unknown';
+  //     m[d] = (m[d] || 0) + 1;
+  //   });
+  //   return Object.entries(m)
+  //     .map(([name, count]) => ({ name, count }))
+  //     .sort((a, b) => b.count - a.count)
+  //     .slice(0, 6);
+  // }, [rows]);
+const topPlantCodes = useMemo(() => {
+  const m = {};
+  rows.forEach((r) => {
+    // Replaced driver_name with plant_code
+    // Added String() in case plant_code is a number
+    const p = String(r.plant_code || 'Unknown').trim() || 'Unknown';
+    m[p] = (m[p] || 0) + 1;
+  });
+  
+  return m; 
+}, [rows]);
   const scopeLabel = isAdmin
     ? plantFilter ? `${PLANT_CODE[plantFilter]} · ${plantFilter}` : 'All plants'
     : `${PLANT_CODE[user.plant]} · ${user.plant}`;
