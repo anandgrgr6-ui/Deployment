@@ -243,10 +243,10 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY
 // Plant directory: code + notification recipients
 // --------------------------------------------------------------------
 const PLANTS = {
-  Mysore:      { code: 'P2', safetyEmail: 'm.sanjay@ranegroup.com',        hrEmail: 'anandgrgr6@gmail.com' },
-  Pondicherry: { code: 'P3', safetyEmail: 'placeholder@ranegroup.com',     hrEmail: '' },
-  Varanavasi:  { code: 'P4', safetyEmail: 'placeholder@ranegroup.com',     hrEmail: '' },
-  Pantnagar:   { code: 'P5', safetyEmail: 'placeholder@ranegroup.com',     hrEmail: '' },
+  Mysore:      { code: 'P2', safetyEmail: 's.sanjana@ranegroup.com',        hrEmail: 'n.harisha@ranegroup.com' },
+  Pondicherry: { code: 'P3', safetyEmail: 'k.chandraprakash@ranegroup.com',     hrEmail: 'a.shajahan@ranegroup.com' },
+  Varanavasi:  { code: 'P4', safetyEmail: 's.joelpraveen@ranegroup.com',     hrEmail: 'r.krishnamoorthy@ranegroup.com' },
+  Pantnagar:   { code: 'P5', safetyEmail: 'a.asimkumar@ranegroup.com',     hrEmail: 'govind.singh@ranegroup.com' },
 };
 
 // --------------------------------------------------------------------
