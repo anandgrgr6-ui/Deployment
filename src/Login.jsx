@@ -38,8 +38,7 @@ export default function Login({ onLogin, onBack }) {
            </button>
         )}
         <div className="login-brand">
-          <span className="brand-mark lg">R</span>
-          <strong>RANE</strong>
+          <img src="rane-logo.jpg" alt="Rane Logo" style={{ height: '50px', marginBottom: '10px' }} />
         </div>
         <h1>Driver Behaviour Observation</h1>
         <p className="login-sub">Sign in to review observations.</p>
