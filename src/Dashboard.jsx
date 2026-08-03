@@ -86,6 +86,7 @@ export default function Dashboard({ user }) {
     <div className="page">
       <div className="page-head row">
         <div>
+          <img src="rane-logo.jpg" alt="Rane Logo" style={{ height: '40px', marginBottom: '10px' }} />
           <h1>Observation Dashboard</h1>
           <p>{scopeLabel}</p>
         </div>
