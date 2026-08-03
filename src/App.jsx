@@ -54,11 +54,7 @@ export default function App() {
     <div className="app">
       <header className="topbar">
         <div className="brand">
-          <span className="brand-mark">R</span>
-          <div className="brand-text">
-            <strong>RANE</strong>
-            <span>Driver Behaviour Observation</span>
-          </div>
+          <img src="rane-logo.jpg" alt="Rane Logo" style={{ height: '36px' }} />
         </div>
 
         <nav className="tabs">
